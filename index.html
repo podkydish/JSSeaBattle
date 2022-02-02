@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Морской бой</title>
+    <link href="style.css" rel="stylesheet">
+    <h1><center>Морской бой</center></h1>
+<center> Версия 1.2</center>
+</head>
+<body background="2021383.png"><body/>
+<p2>
+    Правила игры:<br>Участнику игры выдается своё поле с расставленными кораблями и поле со скрытыми кораблями соперника. <br>
+    Игроку предлагаются различные схемы расстановки кораблей, для изменения расстановки необходимо нажать на кнопку "Начать заново"<br>
+    После выбора нужной расстановки, для начала игры, необходимо нажать на на клетку вражеского поля, в которую вы хотите "выстрелить".<br>
+    Удачи в бою!
+</p2>
+<p>
+<div id="gameArea">
+    <div class="start button">
+        <center>
+        <button class="btn" onclick="runGame(true)">Начать игру</button>
+        </center>
+    </div>
+</div>
+<script src="function.js"></script>
+<script>
+    function runGame(start) {
+        var game = new SeeBattle('gameArea');
+        game.run();
+        if (start) {
+            game.startNewGame();
+        }
+    }
+</script>
+<p/>
